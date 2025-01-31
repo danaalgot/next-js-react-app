@@ -19,13 +19,13 @@ export const metadata = {
 
 function Header() {
   return (
-    <header class="bg-sky-100 p-3">
+    <header className="bg-slate-300 p-3">
       <div>
-        <nav class="flex justify-center">
-          <Link class="mx-2 hover:underline" href="/">Home</Link>
-          <Link class="mx-2 hover:underline" href="/mountains">Mountains</Link>
-          <Link class="mx-2 hover:underline" href="/trees">Trees</Link>
-          <Link class="mx-2 hover:underline" href="/contact">Contact</Link>
+        <nav className="flex justify-center">
+          <Link className="mx-2 hover:underline" href="/">Snowtooth Mountain</Link>
+          <Link className="mx-2 hover:underline" href="/mountain">Mountain</Link>
+          <Link className="mx-2 hover:underline" href="/hotels">Hotels</Link>
+          <Link className="mx-2 hover:underline" href="/contact">Contact</Link>
         </nav>
       </div>
     </header>
@@ -39,7 +39,9 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        {children}
+        <main className="max-w-2xl px-4 mx-auto mt-10">
+          {children}
+        </main>
       </body>
     </html>
   );
